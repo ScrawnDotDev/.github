@@ -1,7 +1,7 @@
 // Shared commitlint configuration for all Scrawn repositories
 // This config is referenced by the reusable workflow
 
-module.exports = {
+export default {
   extends: ['@commitlint/config-conventional'],
   rules: {
     'type-enum': [
