@@ -23,5 +23,5 @@ jobs:
       # Run commitlint with shared config
       - uses: wagoid/commitlint-github-action@v6
         with:
-          configFile: .github-shared/commitlint.config.js
+          configFile: .github-shared/commitlint.config.mjs
           failOnWarnings: true
