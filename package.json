@@ -1,0 +1,10 @@
+{
+  "name": "@scrawndotdev/shared-configs",
+  "version": "1.0.0",
+  "description": "Shared configurations and workflows for Scrawn repositories",
+  "private": true,
+  "devDependencies": {
+    "@commitlint/cli": "^18.6.0",
+    "@commitlint/config-conventional": "^18.6.0"
+  }
+}

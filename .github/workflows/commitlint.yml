@@ -7,10 +7,21 @@ jobs:
   commitlint:
     runs-on: ubuntu-latest
     steps:
+      # Checkout the repository being tested
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
+      # Checkout the .github repo to get shared commitlint config
+      - name: Checkout shared config
+        uses: actions/checkout@v4
+        with:
+          repository: ScrawnDotDev/.github
+          path: .github-shared
+          ref: master
+
+      # Run commitlint with shared config
       - uses: wagoid/commitlint-github-action@v6
         with:
+          configFile: .github-shared/commitlint.config.js
           failOnWarnings: true
